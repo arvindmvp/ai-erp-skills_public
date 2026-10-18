@@ -1,0 +1,59 @@
+name: Skill request
+description: Suggest a focused skill for a Dynamics 365 ERP workflow.
+title: "[Skill request]: "
+labels: ["skill request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggest a reusable skill. Do not include customer data, real company names, tenant URLs, credentials, or screenshots of real environments.
+  - type: input
+    id: workflow
+    attributes:
+      label: Workflow or task
+      description: What should the skill help a D365 user accomplish?
+      placeholder: Review pending purchase order receipt discrepancies
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - supply-chain
+        - finance
+        - consultant-toolkit
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: module
+    attributes:
+      label: D365 module
+      description: Which D365 module or business area is involved?
+  - type: textarea
+    id: users
+    attributes:
+      label: Intended users and when to use it
+      description: Who would use this skill, and what situation should trigger it?
+    validations:
+      required: true
+  - type: textarea
+    id: inputs-output
+    attributes:
+      label: Expected inputs and output
+      description: Describe the information the skill would need and what it should return.
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Guardrails and risks
+      description: Identify any actions that must remain read-only or require explicit human approval.
+    validations:
+      required: true
+  - type: input
+    id: blog-post
+    attributes:
+      label: Matching blog post
+      description: New skills should be published alongside a matching blog post. Add a URL if one exists.

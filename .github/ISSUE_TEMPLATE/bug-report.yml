@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a problem with a skill, its documentation, or validation.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share only fictional or sanitized examples. Never include customer data, real company names, tenant URLs, credentials, or screenshots of real environments.
+  - type: input
+    id: skill
+    attributes:
+      label: Skill or file
+      description: Which skill or repository file is affected?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should the skill or validator do?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead? Include safe, fictional examples only.
+    validations:
+      required: true
+  - type: input
+    id: client
+    attributes:
+      label: Client and version
+      description: Which agent client and version did you use, if relevant?
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the steps needed to reproduce the issue.
